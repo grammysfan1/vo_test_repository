@@ -1,0 +1,24 @@
+[project]
+name = "qapractice-framework"
+version = "0.1.0"
+description = "A small Playwright + pytest framework for learning on qapractice.com"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "allure-pytest>=2.15",
+    "playwright>=1.49",
+    "pytest>=8.3",
+    "pytest-playwright>=0.6",
+]
+
+[tool.pytest.ini_options]
+# pytest looks for tests only inside this folder.
+testpaths = ["tests"]
+# So `import config` and `from pages.login_page import LoginPage` work.
+pythonpath = ["."]
+addopts = [
+    "--browser", "chromium",
+    # Raw Allure files. The HTML report is built from this folder later.
+    "--alluredir=allure-results",
+    "--clean-alluredir",
+]

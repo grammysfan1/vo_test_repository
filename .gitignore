@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# uv
+.python-version
+
+# pytest
+.pytest_cache/
+.cache/
+
+# Playwright
+test-results/
+playwright-report/
+blob-report/
+trace.zip
+
+# Allure. Regenerated on every test run.
+allure-results/
+allure-report/
+
+# Local secrets and editor files
+.env
+.DS_Store
+.idea/
+.vscode/
